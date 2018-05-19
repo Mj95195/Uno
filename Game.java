@@ -14,7 +14,7 @@ public class Game
 	public static void changeTurns()
 	{
 		if(firstPlayerTurn)
-			return false;
-		return true;
+			firstPlayerTurn=false;
+		firstPlayerTurn=true;
 	}
 }
