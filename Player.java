@@ -69,7 +69,7 @@ public class Player
     }
 
 	//This should allow the player to play a card. 
-    public void playCard(ArrayList<Card> currHand)
+    public Card playCard()
     {
 	/*
 	 * Print out all the current card the player has in their hands.
