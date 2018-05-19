@@ -13,11 +13,6 @@ public class AI extends Player
 			aiHand.add(draw());
 		}
 	}
-
-	public Card draw()
-	{
-		super.draw();
-	}
 	
 	public void playCard()
 	{
