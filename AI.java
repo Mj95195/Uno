@@ -6,7 +6,7 @@ public class AI extends Player
 
 	public AI()
 	{
-		hand=new ArrayList<Card>();
+		aiHand=new ArrayList<Card>();
 
 		for(int i = 0; i < 5; i++)
 		{
