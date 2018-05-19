@@ -72,9 +72,11 @@ public class Player
     public void playCard(ArrayList<Card> currHand)
     {
 	/*
+	 * Print out all the current card the player has in their hands.
 	 * Build Scanner to determine what card player wants to play.
-	 * If card is valid, play card and subtract the index of the card from the ArrayList
+	 * If card is valid, play card and subtract the index of the card from the ArrayList.
 	 * Else say that card is invalid and ask until they can play valid card. 
+	 * If they do not have any valid cards they can play, have them draw a card.
 	 */
     }
 }
