@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
-public class AI extends Player;
+public class AI extends Player
 {
 	private ArrayList<Card> aiHand;
 
