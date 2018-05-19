@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 public class AI extends Player;
 {
-	private ArrayList<Card> hand;
+	private ArrayList<Card> aiHand;
 
 	public AI()
 	{
@@ -10,12 +10,16 @@ public class AI extends Player;
 
 		for(int i = 0; i < 5; i++)
 		{
-			hand.add(draw();)
+			aiHand.add(draw();)
 		}
 	}
 
 	public Card draw()
 	{
 		super.draw();
+	}
+	
+	public void playCard()
+	{
 	}
 }
