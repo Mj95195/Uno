@@ -68,7 +68,7 @@ public class Player
         }
     }
 
-    public void playCard(ArrayList<String> hand)
+    public void playCard(ArrayList<Card> currHand)
     {
 	/*
 	 * Build Scanner to determine what card player wants to play.
