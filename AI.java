@@ -14,7 +14,7 @@ public class AI extends Player
 		}
 	}
 	
-	public void playCard()
+	public Card playCard()
 	{
 	}
 }
