@@ -1,5 +1,6 @@
 public class Game
 {
+	//Returns true if it is the first person's turn. Returns false if it is the second person's turn.
 	static boolean firstPlayerTurn=true;
 		
 	public static void main(String[] args)
@@ -9,6 +10,7 @@ public class Game
 
 	}
 
+	//Changes the turns of the players. 
 	public static void changeTurns()
 	{
 		if(firstPlayerTurn)
