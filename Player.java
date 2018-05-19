@@ -68,6 +68,7 @@ public class Player
         }
     }
 
+	//This should allow the player to play a card. 
     public void playCard(ArrayList<Card> currHand)
     {
 	/*
