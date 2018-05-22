@@ -3,29 +3,28 @@ import java.util.ArrayList;
 public class Ai extends Player
 {
     private ArrayList<Card> hand;
-    
 
     public Ai()
     {
         hand = new ArrayList<Card>();
-        for(int i=0; i<5; i++)
+        for(int i = 0; i < 7; i++)
             hand.add(draw());
     }
-
-    public void playCard()
+    
+    public Card playCard(Card card)
     {
-
-    }
-
-    public int checkCards()
-    {
-        for(int i=0;i<hand.size();i++)
+        for(int i = 0; i < hand.size(); i++)
         {
-            int num=0;
-            String color="";
-            if(hand.get(i).isValid(num,color))
-                return i;
+            if(hand.get(i).isValid(card.getNumber(),card.getColor()))
+            {
+                hand.remove(i);
+                return hand.get(i);
+            }
         }
-        return -1;
+        Card drawnCard=draw();
+        if(drawnCard.isValid(card.getNumber(),card.getColor()))
+            return drawnCard;
+        hand.add(drawnCard);
+        return null;
     }
 }
