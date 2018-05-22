@@ -1,4 +1,4 @@
-public class Game
+public class Tester
 {
   static int turn = 1;
   static Card card;
