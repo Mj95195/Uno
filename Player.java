@@ -4,7 +4,6 @@ import java.util.Random;
 public class Player
 {
     private ArrayList<Card> hand;
-    public Card currCard;
 
     public Player()
     {
@@ -44,25 +43,36 @@ public class Player
         {
             if (num == 11)
             {
-                return new SpecialCards(color, "Skip");
+                return new SpecialCards(color, 10);
             } else if (num == 12)
             {
-                return new SpecialCards(color, "Reverse");
+                return new SpecialCards(color, 11);
             } else if (num == 13)
             {
-                return new SpecialCards(color, "plusTwo");
+                return new SpecialCards(color, 12);
             } else if (num == 14)
             {
-                return new SpecialCards("None", "Wild");
+                return new SpecialCards("None", 13);
             } else
             {
-                return new SpecialCards("None", "plusFour");
+                return new SpecialCards("None", 14);
             }
         }
     }
-
-    public void setCurrCard(Card newCard)
+    
+    public Card playCard(int index, Card currentCard)
     {
-      currCard=newCard;
+        Card chosenCard = hand.get(index);
+        if (chosenCard.isValid(currentCard.getNumber(), currentCard.getColor()))
+        {
+            hand.remove(index);
+            return chosenCard;
+        }
+        return null;
+    }
+    
+    public Card returnCard(int index)
+    {
+        return hand.get(index);
     }
 }
