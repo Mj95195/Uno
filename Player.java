@@ -75,4 +75,9 @@ public class Player
     {
         return hand.get(index);
     }
+    
+    public int returnSize()
+    {
+        return hand.size();   
+    }
 }
