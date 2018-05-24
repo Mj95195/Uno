@@ -5,4 +5,9 @@ public class NumberCards extends Card
         setNumber(initNumber);
         setColor(initColor);
     }
+
+    public String toString()
+    {
+      return getNumber()+"("+getColor()+")";
+    }
 }

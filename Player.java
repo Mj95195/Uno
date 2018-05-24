@@ -9,7 +9,7 @@ public class Player
     {
         hand = new ArrayList<Card>();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 7; i++)
         {
             hand.add(draw());
         }
@@ -44,40 +44,44 @@ public class Player
             if (num == 11)
             {
                 return new SpecialCards(color, 10);
-            } else if (num == 12)
+            }
+            else if (num == 12)
             {
                 return new SpecialCards(color, 11);
-            } else if (num == 13)
+            }
+            else if (num == 13)
             {
                 return new SpecialCards(color, 12);
-            } else if (num == 14)
+            }
+            else if (num == 14)
             {
                 return new SpecialCards("None", 13);
-            } else
+            }
+            else
             {
                 return new SpecialCards("None", 14);
             }
         }
     }
-    
+
     public Card playCard(int index, Card currentCard)
     {
         Card chosenCard = hand.get(index);
         if (chosenCard.isValid(currentCard.getNumber(), currentCard.getColor()))
         {
-            hand.remove(index);
             return chosenCard;
         }
         return null;
     }
-    
-    public Card returnCard(int index)
-    {
-        return hand.get(index);
-    }
-    
+
     public int returnSize()
     {
-        return hand.size();   
+        return hand.size();
+    }
+
+    public void printHand()
+    {
+      for(int i = 0; i < hand.size(); i++)
+        System.out.print(hand.get(i).toString()+" ");
     }
 }
