@@ -66,7 +66,7 @@ public class Player
 
     public Card playCard(int index, Card currentCard)
     {
-        Card chosenCard = hand.get(index);
+        Card chosenCard = hand.get(index - 1);
         if (chosenCard.isValid(currentCard.getNumber(), currentCard.getColor()))
         {
             return chosenCard;
